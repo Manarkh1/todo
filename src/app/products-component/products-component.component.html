@@ -1,0 +1,26 @@
+<p>products-component works!</p>
+<div *ngFor="let product of listProduct">
+<div>id:{{product.id}}</div>
+<div>title:{{product.title}}</div>
+<div>quantity:{{product.quantity}}</div>
+<div>price:{{product.price}}</div>
+<div>like:{{product.like}}</div>
+<button (click)="decrementlike(product)">like</button>
+<button [disabled]="product.quantity==0" (click)="decrementProduct(product)">buy</button>
+
+
+
+
+
+</div>
+<div><input type="number" [(ngModel)]="inputPrice" (ngModelChange)="showProducts()" name="" ></div>
+
+<div *ngFor="let product of listProductFilter">
+        <div>id:{{product.id}}</div>
+        <div>title:{{product.title}}</div>
+        <div>quantity:{{product.quantity}}</div>
+        <div>price:{{product.price}}</div>
+        <div>like:{{product.like}}</div>
+        <button (click)="decrementlike(product)">like</button>
+        <button [disabled]="product.quantity==0" (click)="decrementProduct(product)">buy</button>
+</div>        
